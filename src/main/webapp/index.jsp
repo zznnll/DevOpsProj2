@@ -23,7 +23,7 @@
 					<td><input type="text" name="name"></td>
 				</tr>
 				<tr>
-					<td><b>BirthDate</b></td>
+					<td><b>Birth Date:</b></td>
 					<td><input type="text" name="date"></td>
 				</tr>
 				<tr>
