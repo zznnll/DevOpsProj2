@@ -84,6 +84,12 @@ value='${worker.role}' />" class="form-control"
 value='${worker.type}' />" class="form-control"
 						name="type">
 				</fieldset>
+				<fieldset class="form-group">
+					<label> Email</label> <input type="text"
+						value="<c:out
+value='${worker.email}' />" class="form-control"
+						name="email">
+				</fieldset>
 				<button type="submit" class="btn btn-success">Save</button>
 				</form>
 			</div>

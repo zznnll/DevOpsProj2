@@ -28,6 +28,7 @@
 						<th>Mobile Number</th>
 						<th>Job Scope</th>
 						<th>Job Type</th>
+						<th>Email</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
@@ -44,6 +45,7 @@ information accordingly -->
 							<td><c:out value="${worker.phone}" /></td>
 							<td><c:out value="${worker.role}" /></td>
 							<td><c:out value="${worker.type}" /></td>
+							<td><c:out value="${worker.email}" /></td>
 							<!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
 							<td><a href="edit?name=<c:out value='${worker.name}'

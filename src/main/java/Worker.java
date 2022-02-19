@@ -6,8 +6,9 @@ public class Worker {
 	protected String phone;
 	protected String role;
 	protected String type;
+	protected String email;
 
-	public Worker(String name, String date, String gender, String phone, String role, String type) {
+	public Worker(String name, String date, String gender, String phone, String role, String type, String email) {
 		super();
 		this.name = name;
 		this.date = date;
@@ -15,6 +16,7 @@ public class Worker {
 		this.phone = phone;
 		this.role = role;
 		this.type = type;
+		this.email = email;
 	}
 
 	public String getName() {
@@ -63,5 +65,13 @@ public class Worker {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

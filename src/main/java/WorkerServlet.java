@@ -54,6 +54,7 @@ public class WorkerServlet extends HttpServlet {
 		String c = request.getParameter("phone");
 		String a = request.getParameter("role");
 		String b = request.getParameter("type");
+		String s = request.getParameter("email");
 		// Step 3: attempt connection to database using JDBC, you can change the
 		// username and password accordingly using the phpMyAdmin > User Account
 		// dashboard
@@ -63,7 +64,7 @@ public class WorkerServlet extends HttpServlet {
 					"password");
 			// Step 4: implement the sql query using prepared statement
 			// (https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html)
-			PreparedStatement ps = con.prepareStatement("insert into WORKERDETAILS values(?,?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into WORKERDETAILS values(?,?,?,?,?,?,?)");
 			// Step 5: parse in the data retrieved from the web form request into the
 			// prepared statement accordingly
 			ps.setString(1, n);
@@ -72,10 +73,11 @@ public class WorkerServlet extends HttpServlet {
 			ps.setString(4, c);
 			ps.setString(5, a);
 			ps.setString(6, b);
+			ps.setString(7, s);
 			// Step 6: perform the query on the database using the prepared statement
 			int i = ps.executeUpdate();
-			// Step 7: check if the query had been successfully execute, return “You are
-			// successfully registered” via the response,
+			// Step 7: check if the query had been successfully execute, return ï¿½You are
+			// successfully registeredï¿½ via the response,
 			if (i > 0) {
 				PrintWriter writer = response.getWriter();
 				writer.println("<h1>" + "You have successfully entered worker's information to database!" + "</h1>");

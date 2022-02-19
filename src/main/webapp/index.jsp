@@ -11,12 +11,12 @@
 <meta charset="ISO-8859-1">
 <title>Worker-Registration</title>
 </head>
-	<body bgcolor="white">
+<body bgcolor="white">
 	<form action="WorkerServlet" method="post">
-	<br></br>
+		<br></br>
 		<center>
 			<h2>Please fill in your particulars below</h2>
-    <br></br>
+			<br></br>
 			<table border="2" style="color: black">
 				<tr>
 					<td><b>Worker's Name:</b></td>
@@ -44,40 +44,33 @@
 					<td><b>Job Scope:</b></td>
 					<td><input type="text" name="role"></td>
 				</tr>
-					<tr>
+				<tr>
 					<td><b>Job Type:</b></td>
 					<td><select name="type">
-						<option>Full-Time</option>
-						<option>Part-Time</option>
-						<option>Intern</option>
-						<option>Temporary</option>
-						</select></td>
+							<option>Full-Time</option>
+							<option>Part-Time</option>
+							<option>Intern</option>
+							<option>Temporary</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><b>Email:</b></td>
+					<td><input type="text" name="email"></td>
 				</tr>
 			</table>
 
-		
-			
-			
+
+
+
 			<br></br>
-					<td><input type="reset" value="Reset"></td>
-					<td><input type="submit" value="Add to Database"></td>
-	
+			<td><input type="reset" value="Reset"></td>
+			<td><input type="submit" value="Add to Database"></td>
 	</form>
-	
-	<form action="EmailServlet" method="post">	
-			<table>
-			<tr>
-				<td> Email:</td>
-				<td><input type="text" name="email"></td>
-				<br><br>
-				<td> <input type="submit" value="Add Email to Database"></td>
-			</tr>
-			</table>
-			</form>
-				
-			<br></br>
-				<a href="<%=request.getContextPath()%>/WorkerManageServlet/dashboard"
-					class="btn btn-success">Go to Dashboard</a>
+
+
+	<br></br>
+	<a href="<%=request.getContextPath()%>/WorkerManageServlet/dashboard"
+		class="btn btn-success">Go to Dashboard</a>
 
 </body>
 </html>
