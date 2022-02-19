@@ -7,6 +7,7 @@
         <methods>
           <include name="checkButton"/>
           <include name="afterTest"/>
+          <include name="checkTitle"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.sddevops.DevOpsProj2.NewTest -->
