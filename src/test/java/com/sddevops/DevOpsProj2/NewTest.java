@@ -13,19 +13,7 @@ public class NewTest {
 	//declare Selenium WebDriver
 	  private WebDriver webDriver;	
 	  
-	  
-  @Test
-  public void checkTitle() {
-	  
-	  webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
-	  
-	  //Assert the title to check that we are indeed in the correct website
-	  Assert.assertEquals(webDriver.getTitle(), "Worker-Registration");
-	  System.out.println("title: "+webDriver.getTitle());  
-  }
-  	  
-  
-  
+ 
 
   @BeforeTest
   public void beforeTest() {
