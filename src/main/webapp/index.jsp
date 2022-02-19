@@ -69,8 +69,8 @@
 
 
 	<br></br>
-	<a href="<%=request.getContextPath()%>/WorkerManageServlet/dashboard"
-		class="btn btn-success">Go to Dashboard</a>
+	<a class="link" href="<%=request.getContextPath()%>/WorkerManageServlet/dashboard"
+		>Go to Dashboard</a>
 
 </body>
 </html>
