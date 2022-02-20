@@ -4,6 +4,8 @@ import java.util.Comparator;
 import java.util.Objects;
 
 public class Employee {
+	
+	private String id;
 	private String name;
 	private String date;
 	private String gender;
@@ -13,6 +15,7 @@ public class Employee {
 	private String email;
 
 	/**
+	 * @param id
 	 * @param name
 	 * @param date
 	 * @param gender
@@ -21,8 +24,9 @@ public class Employee {
 	 * @param type
 	 * @param email
 	 */
-	public Employee(String name, String date, String gender, String phone, String role, String type, String email) {
+	public Employee(String id, String name, String date, String gender, String phone, String role, String type, String email) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.date = date;
 		this.gender = gender;
@@ -30,6 +34,20 @@ public class Employee {
 		this.role = role;
 		this.type = type;
 		this.email = email;
+	}
+	
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+	
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	/**
@@ -131,7 +149,7 @@ public class Employee {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, date, gender, phone, role, type, email);
+		return Objects.hash(id, name, date, gender, phone, role, type, email);
 	}
 
 	@Override
@@ -144,7 +162,8 @@ public class Employee {
 		return Objects.equals(name, other.name) && Objects.equals(date, other.date)
 				&& Objects.equals(gender, other.gender)
 				&& Objects.equals(phone, other.phone)&& Objects.equals(role, other.role)
-				&& Objects.equals(type, other.type)&& Objects.equals(email, other.email);
+				&& Objects.equals(type, other.type)&& Objects.equals(email, other.email)&&
+				Objects.equals(id, other.id);
 	}
 
 	public static Comparator<Employee> roleComparator = new Comparator<Employee>() {
