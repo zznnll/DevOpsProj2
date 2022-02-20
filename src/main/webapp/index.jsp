@@ -64,7 +64,7 @@
 
 			<br></br>
 			<td><input type="reset" value="Reset"></td>
-			<td><input type="submit" value="Add to Database"></td>
+			<td><input class="button" type="submit" value="Add to Database"></td>
 	</form>
 
 

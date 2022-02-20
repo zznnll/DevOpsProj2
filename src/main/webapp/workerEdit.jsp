@@ -90,7 +90,7 @@ value='${worker.type}' />" class="form-control"
 value='${worker.email}' />" class="form-control"
 						name="email">
 				</fieldset>
-				<button type="submit" class="btn btn-success">Save</button>
+				<button name="save" type="submit" class="btn btn-success">Save</button>
 				</form>
 			</div>
 		</div>
