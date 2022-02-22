@@ -96,6 +96,7 @@ public class DevOpsProj2Test {
 
 	@AfterTest
 	public void afterTest() {
+		webDriver.quit();
 	}
 
 }

@@ -16,76 +16,72 @@ public class NewTest {
 	// declare Selenium WebDriver
 	private WebDriver webDriver;
 
-	//@Test
-	//public void checkTitle() {
+	@Test
+	public void checkTitle() {
 
-		//webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
+		webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
 
 		// Assert the title to check that we are indeed in the correct website
-		//Assert.assertEquals(webDriver.getTitle(), "Worker-Registration");
-		//System.out.println("title: " + webDriver.getTitle());
-	//}
+		Assert.assertEquals(webDriver.getTitle(), "Worker-Registration");
+		System.out.println("title: " + webDriver.getTitle());
+	}
 
-	//@Test
-	//public void checkButton() {
+	@Test
+	public void checkButton() {
 		// Load website as a new page
-		//webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
+		webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.className("link")).click();
+		webDriver.findElement(By.className("link")).click();
 
 		// Assert the new title to check that the title contain Employee Management and
 		// the button had successfully bring us to the new page
-		//Assert.assertTrue(webDriver.getTitle().contains("Employee Management"));
-		//System.out.println("new title: " + webDriver.getTitle());
-	//}
+		Assert.assertTrue(webDriver.getTitle().contains("Employee Management"));
+		System.out.println("new title: " + webDriver.getTitle());
+	}
 
-	//@Test
-	//public void addEmployee() {
+	@Test
+	public void addEmployee() {
 		// Load website as a new page
-		//webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
+		webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.name("name")).sendKeys("Auto");
+		webDriver.findElement(By.name("name")).sendKeys("Auto");
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.name("date")).sendKeys("15/01/2003");
+		webDriver.findElement(By.name("date")).sendKeys("15/01/2003");
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.name("gender")).click();
-
-
-		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.name("role")).sendKeys("Worker");
+		webDriver.findElement(By.name("gender")).click();
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.name("type")).click();
-
-	
+		webDriver.findElement(By.name("role")).sendKeys("Worker");
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.className("button")).click();
-	//}
-	
-	//@Test
-	//public void EditEmployeeDetails() {
+		webDriver.findElement(By.name("type")).click();
+
+		// Retrieve link using it's class name and click on it
+		webDriver.findElement(By.className("button")).click();
+	}
+
+	@Test
+	public void EditEmployeeDetails() {
 		// Load website as a new page
-		//webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
-		
-		//webDriver.findElement(By.className("link")).click();
-		//webDriver.findElement(By.className("edit")).click();
-		
+		webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
+
+		webDriver.findElement(By.className("link")).click();
+		webDriver.findElement(By.className("edit")).click();
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.name("phone")).sendKeys("94658343");
+		webDriver.findElement(By.name("phone")).sendKeys("94658343");
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.name("email")).sendKeys("autoEdit@email.com");
+		webDriver.findElement(By.name("email")).sendKeys("autoEdit@email.com");
 
 		// Retrieve link using it's class name and click on it
-		//webDriver.findElement(By.name("save")).click();
+		webDriver.findElement(By.name("save")).click();
 
-	//}
+	}
 
 	@BeforeTest
 	public void beforeTest() {
@@ -94,13 +90,11 @@ public class NewTest {
 		String chromeDriverDir = "C:\\Program Files (x86)\\Google\\Chrome\\chromedriver.exe";
 
 		System.setProperty("webdriver.chrome.driver", chromeDriverDir);
-		
 
 		// initialize FirefoxDriver at the start of test
 		webDriver = new ChromeDriver();
 		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-	
+
 	}
 
 	@AfterTest
