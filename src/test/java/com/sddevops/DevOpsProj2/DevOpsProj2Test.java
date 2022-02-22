@@ -91,6 +91,10 @@ public class DevOpsProj2Test {
 		
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--no-sandbox");
+		chromeOptions.addArguments("--disable-dev-shm-usage");
+		chromeOptions.addArguments("disable-infobars");
+		System.setProperty("webdriver.chrome.driver", chromeDriverDir);
 		webDriver = new ChromeDriver(chromeOptions);
 		
 
