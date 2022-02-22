@@ -2,8 +2,12 @@ package com.sddevops.DevOpsProj2;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
@@ -79,6 +83,15 @@ public class DevOpsProj2Test {
 
 	@BeforeTest
 	public void beforeTest() {
+		
+		String chromeDriverDir = "C:\\Program Files (x86)\\Google\\Chrome\\chromedriver.exe";
+
+		System.setProperty("webdriver.chrome.driver", chromeDriverDir);
+		
+
+		// initialize FirefoxDriver at the start of test
+		webDriver = new ChromeDriver();
+		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@AfterTest
