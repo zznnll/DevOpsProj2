@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
@@ -88,10 +89,11 @@ public class DevOpsProj2Test {
 
 		System.setProperty("webdriver.chrome.driver", chromeDriverDir);
 		
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
+		webDriver = new ChromeDriver(chromeOptions);
+		
 
-		// initialize FirefoxDriver at the start of test
-		webDriver = new ChromeDriver();
-		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@AfterTest
