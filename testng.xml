@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-       <class name="com.sddevops.DevOpsProj2.DevOpsProj2Test"/>
+       <class name="com.sddevops.DevOpsProj2.NewTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
