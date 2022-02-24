@@ -15,7 +15,7 @@
 	<form action="WorkerServlet" method="post">
 		<br></br>
 		<center>
-			<h2>Please fill in your particulars below</h2>
+			<h1><b>Please fill in your particulars below</b></h1>
 			<br></br>
 			<table border="2" style="color: black">
 				<tr>
