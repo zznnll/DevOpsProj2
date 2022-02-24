@@ -15,9 +15,9 @@ import org.testng.annotations.AfterTest;
 
 public class NewTest {
 	// declare Selenium WebDriver
+	/*
 	private WebDriver webDriver;
 
-	/*
 	@Test
 	public void checkTitle() {
 		webDriver.navigate().to("http://localhost:8090/DevOpsProj2/");
@@ -111,6 +111,6 @@ public class NewTest {
 	public void afterTest() {
 		// Quit the ChromeDriver and close all associated window at the end of test
 		webDriver.quit();
-		*/
 	}
+	*/
 }
